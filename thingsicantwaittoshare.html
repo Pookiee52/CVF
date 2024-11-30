@@ -1,0 +1,146 @@
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="whatidoreaboutyou.html">What I adore about you</a></li>
+        <li><a href="thingsicantwaittoshare.html">Things I can't wait to share with you</a></li>
+    </ul>
+</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things I Can't Wait to Share with You</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styless.css">
+    <style>
+        /* Cute Styles for This Page Only */
+        body {
+            background-color: #fbe8eb; /* Pale pink background */
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ff1493; /* Deep pink */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #333; /* Dark gray text */
+            line-height: 1.6;
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .popping-text {
+            font-size: 1.8rem;
+            color: #ff1493; /* Deep pink */
+            font-weight: 600;
+            animation: pop-in 1s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes pop-in {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Position for images */
+        .corner-image {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+
+        .top-left {
+            top: 10px;
+            left: 10px;
+        }
+
+        .bottom-right {
+            bottom: 10px;
+            right: 10px;
+        }
+
+        /* Floating images */
+        .floating-image {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+            50% {
+                transform: translate(-50%, -50%) translateY(-15px);
+            }
+            100% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Things I Can't Wait to Share with You</h1>
+    </header>
+    <main>
+        <p>
+            I can’t wait to go on new adventures together, whether it’s exploring new places or just enjoying little moments. 
+            I’m excited to make more memories, share new experiences, and build even more laughter between us. Most of all, 
+            I look forward to every quiet, simple moment we get to enjoy together.
+        </p>
+        <div class="popping-text">
+            With you, even the ordinary feels extraordinary.
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Qubla</p>
+    </footer>
+
+    <!-- Add the images here -->
+    <img src="im4.jpg" alt="Image1" class="corner-image top-left">
+    <img src="im5.jpg" alt="Image2" class="corner-image bottom-right">
+
+    <script>
+        // Make the popping text appear after a delay
+        window.onload = function() {
+            const poppingText = document.querySelector('.popping-text');
+            setTimeout(() => {
+                poppingText.style.opacity = '1';
+                poppingText.style.animation = 'pop-in 1s ease-in-out';
+            }, 1500); // Delay of 1.5 seconds
+        };
+    </script>
+</body>
+</html>
